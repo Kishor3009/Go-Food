@@ -58,7 +58,7 @@ function Home() {
 </button></div></div>
         <div className='container'> {/* boootstrap is mobile first */}
         {
-          foodCat !== []
+          foodCat.length !== 0
             ? foodCat.map((data) => {
               return (
                 // justify-content-center
@@ -67,7 +67,7 @@ function Home() {
                     {data.CategoryName}
                   </div>
                   <hr id="hr-success" style={{ height: "4px", backgroundImage: "-webkit-linear-gradient(left,rgb(0, 255, 137),rgb(0, 0, 0))" }} />
-                  {foodItems !== [] ? foodItems.filter(
+                  {foodItems.length !== 0 ? foodItems.filter(
                     (items) => (items.CategoryName === data.CategoryName) && (items.name.toLowerCase().includes(search.toLowerCase())))
                     .map(filterItems => {
                       return (
