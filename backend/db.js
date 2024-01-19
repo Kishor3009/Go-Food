@@ -1,5 +1,9 @@
 const mongoose = require('mongoose');
-const mongoURI = 'mongodb+srv://gofood:Kishor3009@cluster0.h3uktul.mongodb.net/gofoodmern?retryWrites=true&w=majority';
+// Import dotenv and configure it
+require('dotenv').config();
+
+// Use process.env to access environment variables
+const mongoURI = process.env.MONGO_URI;
 
 const connectToDB = async () => {
   try {
