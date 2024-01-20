@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev":"nodemon index.js",
+    "dev": "nodemon index.js",
     "build": "webpack --config webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,7 +20,8 @@
     "extend-node": "^0.0.1",
     "json-stringify-safe": "^5.0.1",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.12.4"
+    "mongoose": "^6.12.4",
+    "webpack": "^5.89.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
