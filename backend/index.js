@@ -3,7 +3,7 @@ const app = express();
 const port = 5000;
 
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+  res.setHeader("Access-Control-Allow-Origin", "https://go-food-umbf.onrender.com");
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
@@ -19,7 +19,10 @@ const connectToDB = require('./db');
 const startServer = async () => {
   try {
     // Connect to MongoDB and wait for data
-    const { data, catData } = await connectToDB();
+    const {
+      data,
+      catData
+    } = await connectToDB();
 
     // Set global.foodData and global.foodCategory
     global.foodData = data;
@@ -27,7 +30,7 @@ const startServer = async () => {
 
     // Start the server
     app.listen(port, () => {
-      console.log(`Example app listening on http://localhost:${port}`);
+      console.log(`Example app listening`);
     });
   } catch (error) {
     console.error('Error connecting to MongoDB:', error.message);
