@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "build": "webpack --config webpack.config.js",
+    "build": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kishor Shinde",
@@ -23,7 +23,8 @@
     "mongoose": "^6.12.4"
   },
   "devDependencies": {
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "webpack-cli": "^5.1.4"
   },
   "description": ""
 }
